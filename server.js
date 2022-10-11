@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const app = express();
 
 //import routees
@@ -10,6 +10,7 @@ const postRoutes = require('./routes/posts');
 
 //app midleware
 app.use(bodyParser());
+app.use(cors());
 //route midleware
 app.use(postRoutes);
 
